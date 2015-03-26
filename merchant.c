@@ -12,7 +12,7 @@ typedef struct MERCHANT_OBJECT_STRUCT{
 
 /**
  * @class	merch_t
- * @brief	The static class object for a player character
+ * @brief	The static class object for a merchant character
  * @extends	character_t
  */
 typedef struct MERCHANT_CLASS{
@@ -26,7 +26,7 @@ npc_t const *install(void){
 	this_static.base.base.constructor = merchant_construct;
 	this_static.base.base.destruct = merchant_destruct;
 	//more to be added later
-	return (character_t *)&this_static;
+	return (npc_t *)&this_static;
 }
 
 void uninstall(void){
